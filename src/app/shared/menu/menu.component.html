@@ -5,7 +5,38 @@
         title="Home"
         data-test-key="menu-item-home"
     >
+        <i class="fas fa-home"></i>
         Home
+    </a>
+
+    <a
+        [routerLink]="['./characters']"
+        [routerLinkActive]="['currently-selected']"
+        title="Characters"
+        data-test-key="menu-item-characters"
+    >
+        <i class="fas fa-user-secret"></i>
+        Characters
+    </a>
+
+    <a
+        [routerLink]="['./planets']"
+        [routerLinkActive]="['currently-selected']"
+        title="Planets"
+        data-test-key="menu-item-planets"
+    >
+        <i class="fas fa-globe-europe"></i>
+        Planets
+    </a>
+
+    <a
+        [routerLink]="['./starships']"
+        [routerLinkActive]="['currently-selected']"
+        title="Starships"
+        data-test-key="menu-item-starships"
+    >
+        <i class="fas fa-ship"></i>
+        Starships
     </a>
 
     <a
@@ -14,6 +45,7 @@
         title="Films"
         data-test-key="menu-item-films"
     >
+        <i class="fas fa-film"></i>
         Films
     </a>
 
@@ -22,6 +54,7 @@
         title="Credits"
         data-test-key="menu-item-credits"
     >
+        <i class="far fa-file-alt"></i>
         Credits
     </a>
 </div>

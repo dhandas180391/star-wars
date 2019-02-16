@@ -5,4 +5,8 @@ sw-home {
         cursor: pointer;
         transition: .5s;
     }
+
+    .disabled-category {
+        color: $gray-500;
+    }
 }
