@@ -1,0 +1,24 @@
+sw-menu {
+    div {
+        border-top: 5px solid $pink;
+        padding: .4rem 0;
+
+        a {
+            padding: .5rem 1rem;
+            text-transform: lowercase;
+            color: $gray-900;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: none;
+                color: $white;
+                background-color: $pink;
+            }
+        }
+
+        .currently-selected {
+            background-color: $pink;
+            color: $white;
+        }
+    }
+}

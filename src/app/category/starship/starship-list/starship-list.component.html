@@ -1,0 +1,21 @@
+<h3 *ngIf="title" class="pl-3" data-test-key="starship-title">
+	<i class="fas fa-ship"></i>
+	{{ title }}
+</h3>
+
+<div class="jumbotron jumbotron-fluid">
+	<div class="container" *ngIf="!loading && starshipList && starshipList.length > 0">
+		<ul class="list-group" data-test-key="starship-list">
+			<li class="list-group-item" *ngFor="let s of starshipList | slice:0:5;" [title]="s.name"
+				(click)="viewDetails(s)">
+				{{ s.name }}
+			</li>
+		</ul>
+	</div>
+
+	<div *ngIf="!loading && starshipList.length === 0" class="text-center lead" data-test-key="no-starships-msg">No starships were found</div>
+
+	<h1 class="text-center" *ngIf="loading" data-test-key="starship-list-spinner">
+		<i class="fas fa-spinner fa-spin"></i>
+	</h1>
+</div>

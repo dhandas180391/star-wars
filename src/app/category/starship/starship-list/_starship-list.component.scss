@@ -1,0 +1,7 @@
+sw-starship-list {
+    @include lists;
+
+    .list-group-item {
+        cursor: pointer;
+    }
+}

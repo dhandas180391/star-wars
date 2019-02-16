@@ -1,0 +1,21 @@
+<h3 *ngIf="title" class="pl-3" data-test-key="character-title">
+	<i class="fas fa-user-secret"></i>
+	{{ title }}
+</h3>
+
+<div class="jumbotron jumbotron-fluid">
+	<div class="container" *ngIf="!loading && characterList && characterList.length > 0">
+		<ul class="list-group" data-test-key="character-list">
+			<li class="list-group-item" *ngFor="let c of characterList | slice:0:4;" [title]="c.name"
+				(click)="viewDetails(c)">
+				{{ c.name }}
+			</li>
+		</ul>
+	</div>
+
+	<div *ngIf="!loading && characterList.length === 0" class="text-center lead" data-test-key="no-characters-msg">No characters were found</div>
+
+	<h1 class="text-center" *ngIf="loading" data-test-key="character-list-spinner">
+		<i class="fas fa-spinner fa-spin"></i>
+	</h1>
+</div>

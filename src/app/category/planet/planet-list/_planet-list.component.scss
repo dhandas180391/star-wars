@@ -1,0 +1,7 @@
+sw-planet-list {
+    @include lists;
+
+    .list-group-item {
+        cursor: pointer;
+    }
+}

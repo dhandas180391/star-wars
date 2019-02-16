@@ -1,0 +1,44 @@
+<div class="modal-header">
+	<h4 class="modal-title">{{ data.name }}</h4>
+	<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('close')">
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+<div class="modal-body">
+	<div class="text-center mb-5">
+		<img src="assets/star-wars-helmet-icon.png">
+	</div>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th scope="row" class="text-right">Gender</th>
+				<td class="text-left">{{ data.gender }}</td>
+			</tr>
+			<tr>
+				<th scope="row" class="text-right">Birth Year</th>
+				<td class="text-left">{{ data.birth_year }}</td>
+			</tr>
+			<tr>
+				<th scope="row" class="text-right">Height</th>
+				<td class="text-left">{{ data.height }}</td>
+			</tr>
+			<tr>
+				<th scope="row" class="text-right">Mass</th>
+				<td class="text-left">{{ data.mass }}</td>
+			</tr>
+			<tr>
+				<th scope="row" class="text-right">Hair Color</th>
+				<td class="text-left">{{ data.hair_color }}</td>
+			</tr>
+			<tr>
+				<th scope="row" class="text-right">Skin Color</th>
+				<td class="text-left">{{ data.skin_color }}</td>
+			</tr>
+			<tr>
+				<th scope="row" class="text-right">Eye Color</th>
+				<td class="text-left">{{ data.eye_color }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

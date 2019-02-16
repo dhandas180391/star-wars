@@ -1,0 +1,8 @@
+sw-home {
+    .category:hover {
+        background-color: $pink;
+        color: $white;
+        cursor: pointer;
+        transition: .5s;
+    }
+}

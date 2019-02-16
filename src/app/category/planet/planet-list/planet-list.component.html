@@ -1,0 +1,21 @@
+<h3 *ngIf="title" class="pl-3" data-test-key="planet-title">
+	<i class="fas fa-globe-europe"></i>
+	{{ title }}
+</h3>
+
+<div class="jumbotron jumbotron-fluid">
+	<div class="container" *ngIf="!loading && planetList && planetList.length > 0">
+		<ul class="list-group" data-test-key="planet-list">
+			<li class="list-group-item" *ngFor="let p of planetList | slice:0:6;" [title]="p.name"
+				(click)="viewDetails(p)">
+				{{ p.name }}
+			</li>
+		</ul>
+	</div>
+
+	<div *ngIf="!loading && planetList.length === 0" class="text-center lead" data-test-key="no-planets-msg">No planets were found</div>
+
+	<h1 class="text-center" *ngIf="loading" data-test-key="planet-list-spinner">
+		<i class="fas fa-spinner fa-spin"></i>
+	</h1>
+</div>

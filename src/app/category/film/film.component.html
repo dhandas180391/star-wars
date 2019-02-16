@@ -1,0 +1,21 @@
+<h3 *ngIf="title" class="pl-3" data-test-key="film-title">
+	<i class="fas fa-film"></i>
+	{{ title }}
+</h3>
+
+<div *ngIf="films && films.length > 0" class="flex-container">
+	<div *ngFor="let f of films" class="col-md-6 col-lg-4 text-center">
+		<div class="film-tile" [attr.data-test-key]="'film-' + f.title" data-toggle="tooltip" data-placement="bottom"
+			[title]="f.opening_crawl" data-test-key="film-tiles">
+			<h4>{{ f.title }}</h4>
+
+			<small>was release on {{ f.release_date | date: 'mediumDate' }}</small>
+
+			<h6>Directed by</h6>
+			<small>{{ f.director }}</small>
+
+			<h6>Produced by</h6>
+			<small>{{ f.producer }}</small>
+		</div>
+	</div>
+</div>

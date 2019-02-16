@@ -1,0 +1,11 @@
+@mixin lists {
+    .list-group {
+        .list-group-item {
+            &:hover {
+                background-color: $pink;
+                color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<div class="text-center">
+    <a
+        [routerLink]="['./home']"
+        [routerLinkActive]="['currently-selected']"
+        title="Home"
+        data-test-key="menu-item-home"
+    >
+        Home
+    </a>
+
+    <a
+        [routerLink]="['./films']"
+        [routerLinkActive]="['currently-selected']"
+        title="Films"
+        data-test-key="menu-item-films"
+    >
+        Films
+    </a>
+
+    <a
+        (click)="viewCredits()"
+        title="Credits"
+        data-test-key="menu-item-credits"
+    >
+        Credits
+    </a>
+</div>

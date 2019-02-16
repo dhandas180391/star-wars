@@ -1,0 +1,30 @@
+@import './modal/modal.component';
+@import './home/home.component';
+@import './shared/header/header.component';
+@import './shared//footer/footer.component';
+@import './shared/menu/menu.component';
+@import './category/character/character-list/character-list.component';
+@import './category/planet/planet-list/planet-list.component';
+@import './category/starship/starship-list/starship-list.component';
+@import './category/film/film.component';
+
+sw-root {
+    main {
+        a {
+            color: $gray-900;
+            cursor: pointer;
+            
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .container {
+            max-width: 100%;
+        }
+
+        i.fa-spinner {
+            color: $pink;
+        }
+    }
+}
