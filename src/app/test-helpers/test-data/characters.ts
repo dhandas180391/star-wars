@@ -27,7 +27,7 @@ export const characterData = {
                 "https://www.swapi.co/api/vehicles/14/",
                 "https://www.swapi.co/api/vehicles/30/"
             ],
-            starship: [
+            starships: [
                 "https://www.swapi.co/api/starships/12/",
                 "https://www.swapi.co/api/starships/22/"
             ],
