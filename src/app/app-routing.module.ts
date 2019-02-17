@@ -9,7 +9,7 @@ import { FilmComponent } from './category/film/film.component';
 
 import { FilmResolver } from './category/film/film-resolver.service';
 
-const routes: Routes = [
+export const routes: Routes = [
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
 	{ path: 'characters', component: CharacterListComponent, data: { title: 'Characters' } },
