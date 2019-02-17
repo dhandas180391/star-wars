@@ -9,3 +9,13 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import './app/shared/scss/mixins';
 
 @import './app/app.component';
+
+html {
+    position: relative;
+    min-height: 100%;
+
+    body {
+        background-color: $gray-200;
+        margin-bottom: 60px; /* same as footer height */
+    }
+}

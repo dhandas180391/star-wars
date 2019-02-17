@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="menu text-center">
     <a
         [routerLink]="['./home']"
         [routerLinkActive]="['currently-selected']"
@@ -6,7 +6,7 @@
         data-test-key="menu-item-home"
     >
         <i class="fas fa-home"></i>
-        Home
+        <span class="d-none d-sm-none d-md-inline"> Home</span>
     </a>
 
     <a
@@ -16,7 +16,7 @@
         data-test-key="menu-item-characters"
     >
         <i class="fas fa-user-secret"></i>
-        Characters
+        <span class="d-none d-sm-none d-md-inline"> Characters</span>
     </a>
 
     <a
@@ -26,7 +26,7 @@
         data-test-key="menu-item-planets"
     >
         <i class="fas fa-globe-europe"></i>
-        Planets
+        <span class="d-none d-sm-none d-md-inline"> Planets</span>
     </a>
 
     <a
@@ -36,7 +36,7 @@
         data-test-key="menu-item-starships"
     >
         <i class="fas fa-ship"></i>
-        Starships
+        <span class="d-none d-sm-none d-md-inline"> Starships</span>
     </a>
 
     <a
@@ -46,15 +46,16 @@
         data-test-key="menu-item-films"
     >
         <i class="fas fa-film"></i>
-        Films
+        <span class="d-none d-sm-none d-md-inline"> Films</span>
     </a>
 
     <a
+        [routerLink]=""
         (click)="viewCredits()"
         title="Credits"
         data-test-key="menu-item-credits"
     >
         <i class="far fa-file-alt"></i>
-        Credits
+        <span class="d-none d-sm-none d-md-inline"> Credits</span>
     </a>
 </div>

@@ -1,5 +1,6 @@
 sw-menu {
-    div {
+    .menu {
+        background-color: $white;
         border-top: 5px solid $pink;
         padding: .4rem 0;
 
@@ -13,6 +14,7 @@ sw-menu {
                 text-decoration: none;
                 color: $white;
                 background-color: $pink;
+                transition: .5s ease;
             }
         }
 

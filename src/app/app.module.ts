@@ -5,7 +5,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderModule } from './shared/header/header.module';
 import { FooterModule } from './shared/footer/footer.module';
-import { MenuModule } from './shared/menu/menu.module';
 import { HomeModule } from './home/home.module';
 import { CharacterModule } from './category/character/character.module';
 import { PlanetModule } from './category/planet/planet.module';
@@ -25,7 +24,6 @@ import { AppComponent } from './app.component';
 		AppRoutingModule,
 		HeaderModule,
 		FooterModule,
-		MenuModule,
 		HomeModule,
 		CharacterModule,
 		PlanetModule,

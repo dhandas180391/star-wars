@@ -1,6 +1,10 @@
 sw-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
     h1 {
-        background-color: $black;
+        background-color: $gray-900;
         margin: 0;
         color: $white;
         text-transform: uppercase;

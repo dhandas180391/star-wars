@@ -1,4 +1,9 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
+import { ModalService } from '../../modal/modal.service';
+
+import { MenuModule } from '../menu/menu.module';
 
 import { HeaderComponent } from './header.component';
 
@@ -11,6 +16,13 @@ describe('Component: HeaderComponent', () => {
 			declarations: [
 				HeaderComponent
 			],
+			imports: [
+				RouterTestingModule,
+				MenuModule
+			],
+			providers: [
+				ModalService
+			]
 		}).compileComponents().then(() => {
 			fixture = TestBed.createComponent(HeaderComponent);
 			component = fixture.componentInstance;

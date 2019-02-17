@@ -1,9 +1,9 @@
-<h3 *ngIf="title" class="pl-3" data-test-key="film-title">
+<h3 *ngIf="title" class="title pl-3 pb-2 mb-0" data-test-key="film-title">
 	<i class="fas fa-film"></i>
 	{{ title }}
 </h3>
 
-<div *ngIf="films && films.length > 0" class="flex-container">
+<div *ngIf="films && films.length > 0" class="film-container">
 	<div *ngFor="let f of films" class="col-md-6 col-lg-4 text-center">
 		<div class="film-tile" [attr.data-test-key]="'film-' + f.title" data-toggle="tooltip" data-placement="bottom"
 			[title]="f.opening_crawl" data-test-key="film-tiles">
