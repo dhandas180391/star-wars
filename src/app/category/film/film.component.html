@@ -3,19 +3,40 @@
 	{{ title }}
 </h3>
 
-<div *ngIf="films && films.length > 0" class="film-container">
-	<div *ngFor="let f of films" class="col-md-6 col-lg-4 text-center">
-		<div class="film-tile" [attr.data-test-key]="'film-' + f.title" data-toggle="tooltip" data-placement="bottom"
-			[title]="f.opening_crawl" data-test-key="film-tiles">
-			<h4>{{ f.title }}</h4>
+<div class="container" *ngIf="films && films.length > 0">
+	<div *ngFor="let f of films" class="film" [attr.data-test-key]="'film-' + f.title" [title]="f.title">
+		<h4>{{ f.title }}</h4>
 
-			<small>was release on {{ f.release_date | date: 'mediumDate' }}</small>
+		<h6 class="mt-2 mb-2">Released <small>{{ f.release_date | date: 'mediumDate' }}</small></h6>
 
-			<h6>Directed by</h6>
-			<small>{{ f.director }}</small>
+		<h6 class="mt-2 mb-2">Directed by <small>{{ f.director }}</small></h6>
 
-			<h6>Produced by</h6>
-			<small>{{ f.producer }}</small>
-		</div>
+		<h6 class="mt-2 mb-2">Produced by <small>{{ f.producer }}</small></h6>
+
+		<small class="font-italic">{{ f.opening_crawl }}</small>
+
+		<ng-container *ngIf="f.characters && f.characters.length > 0">
+			<h6 class="mt-2 mb-2">Cast</h6>
+
+			<ng-container *ngFor="let url of f.characters">
+				<ng-container *ngIf="getCharacterName(url)">
+					<button type="button" class="btn btn-link m-1 character-link" [title]="getCharacterName(url)" (click)="viewDetails(url)">
+						<small>{{ getCharacterName(url) }}</small>
+					</button>
+				</ng-container>
+			</ng-container>
+		</ng-container>
+
+		<ng-container *ngIf="f.species && f.species.length > 0">
+			<h6 class="mt-2 mb-2">Species</h6>
+
+			<ng-container *ngFor="let url of f.species; let f=first; let l=last; let i=index">
+				<ng-container *ngIf="getSpecieName(url)">
+					<small>
+						{{ getSpecieName(url) }}<span *ngIf="!l">, </span>
+					</small>
+				</ng-container>
+			</ng-container>
+		</ng-container>
 	</div>
 </div>

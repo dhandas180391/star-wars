@@ -1,6 +1,11 @@
 import { TestBed, async, ComponentFixture, fakeAsync, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, Data } from '@angular/router';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+
+import { ModalService } from '../../modal/modal.service';
+import { CharacterService } from '../character/character.service';
+import { SpecieService } from '../specie/specie.service';
 
 import { FilmComponent } from './film.component';
 
@@ -14,7 +19,8 @@ describe('Component: FilmComponent', () => {
 				FilmComponent
 			],
 			imports: [
-				RouterTestingModule
+				RouterTestingModule,
+				HttpClientTestingModule
 			],
 			providers: [
 				{
@@ -26,7 +32,10 @@ describe('Component: FilmComponent', () => {
 							})
 						}
 					}
-				}
+				},
+				ModalService,
+				CharacterService,
+				SpecieService
 			]
 		}).compileComponents().then(() => {
 			fixture = TestBed.createComponent(FilmComponent);

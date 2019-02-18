@@ -15,4 +15,11 @@ export class CharacterService {
 				throw error;
 			});
 	}
+
+	getCharacter(url: string): Promise<Character> {
+		return this.httpClient.get<Character>(url).toPromise()
+			.catch((error) => {
+				throw error;
+			});
+	}
 }

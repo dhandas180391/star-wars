@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CharacterService } from '../character/character.service';
+import { SpecieService } from '../specie/specie.service';
+
 import { FilmComponent } from './film.component';
 import { FilmResolver } from './film-resolver.service';
 
@@ -15,7 +18,9 @@ import { FilmResolver } from './film-resolver.service';
 		CommonModule
 	],
 	providers: [
-		FilmResolver
+		FilmResolver,
+		CharacterService,
+		SpecieService
 	]
 })
 export class FilmModule { }

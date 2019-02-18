@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { CharacterService } from './character.service';
+import { SpecieService } from './specie.service';
 
-describe('Service: CharacterService', () => {
-    let service: CharacterService;
+describe('Service: SpecieService', () => {
+    let service: SpecieService;
     let httpMock: HttpTestingController;
 
     beforeEach(() => {
@@ -13,40 +13,26 @@ describe('Service: CharacterService', () => {
                 HttpClientTestingModule
             ],
             providers: [
-                CharacterService
+                SpecieService
             ]
         });
 
         // inject the service
-        service = TestBed.get(CharacterService);
+        service = TestBed.get(SpecieService);
         httpMock = TestBed.get(HttpTestingController);
     });
 
-    it('should return a list of star wars characters', () => {
-        service.getCharacters()
+    it('should return a list of star wars species', () => {
+        service.getSpecies()
             .then((response) => {
                 expect(response.results.length).toEqual(1);
                 expect(response.results[0].name).toEqual('Simmy Dhanda');
             });
 
-        const api = httpMock.expectOne(req => req.method === 'GET' && req.url === '/api/people');
+        const api = httpMock.expectOne(req => req.method === 'GET' && req.url === '/api/species');
 
         api.flush(
             [{ name: 'Simmy Dhanda' }],
-            { status: 200, statusText: 'OK' },
-        );
-    });
-
-    it('should return a character', () => {
-        service.getCharacter('/api/people/1')
-            .then((character) => {
-                expect(character.name).toEqual('Simmy Dhanda');
-            });
-
-        const api = httpMock.expectOne(req => req.method === 'GET' && req.url === '/api/people/1');
-
-        api.flush(
-            { name: 'Simmy Dhanda' },
             { status: 200, statusText: 'OK' },
         );
     });
