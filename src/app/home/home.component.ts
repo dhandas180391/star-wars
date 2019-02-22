@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 	templateUrl: './home.component.html'
 })
 export class HomeComponent {
+	@HostBinding('class.page-container') isPage = true;
+
 	constructor(private router: Router) { }
 
 	public gotoPage(route: string) {

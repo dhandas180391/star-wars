@@ -11,23 +11,31 @@
 
 sw-root {
     main {
-        padding-top: 90px;
+        min-height: calc(100vh - #{$page-footer-height});
+        padding-top: $page-header-height;
 
-        a {
-            color: $gray-900;
-            cursor: pointer;
-            
-            &:hover {
-                text-decoration: none;
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - #{$page-header-height} - #{$page-footer-height});
+            background-color: $gray-200;
+
+            .container {
+                max-width: 100%;
             }
-        }
-
-        .container {
-            max-width: 100%;
-        }
-
-        i.fa-spinner {
-            color: $pink;
+    
+            a {
+                color: $gray-900;
+                
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+    
+            i.fa-spinner {
+                color: $pink;
+            }
         }
     }
 }
