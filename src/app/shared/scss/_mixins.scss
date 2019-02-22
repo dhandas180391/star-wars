@@ -9,3 +9,57 @@
         }
     }
 }
+
+@mixin modal {
+    .modal-content {
+        border-radius: 0;
+        border: none;
+        background: none;
+
+        .modal-header {
+            .close {
+                text-shadow: none;
+            }
+        }
+
+        .modal-body {
+            min-height: 12rem;
+        }
+    }
+}
+
+@mixin primary-modal {
+    .modal-header {
+        background-color: $gray-900;
+        color: $white;
+        border-radius: 0;
+        border-bottom: none;
+
+        .close {
+            color: $white;
+        }
+    }
+
+    .modal-body {
+        background-color: $gray-800;
+        color: $white;
+    }
+}
+
+@mixin secondary-modal {
+    .modal-header {
+        background-color: $gray-900;
+        color: $white;
+        border-radius: 0;
+        border-bottom: 5px solid $pink;
+
+        .close {
+            color: $white;
+        }
+    }
+
+    .modal-body {
+        background-color: $white;
+        color: $gray-900;
+    }  
+}

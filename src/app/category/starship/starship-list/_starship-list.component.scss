@@ -1,10 +1,6 @@
 sw-starship-list {
     @include lists;
 
-    .title {
-        background-color: $white;
-    }
-
     .list-group-item {
         cursor: pointer;
     }

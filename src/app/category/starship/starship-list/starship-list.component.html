@@ -1,7 +1,4 @@
-<h3 *ngIf="title" class="title pl-3 pb-2 mb-0" data-test-key="starship-title">
-	<i class="fas fa-ship"></i>
-	{{ title }}
-</h3>
+<sw-page-title [title]="title" [iconClass]="'fa-ship'"></sw-page-title>
 
 <div class="jumbotron jumbotron-fluid">
 	<div class="container" *ngIf="!loading && starshipList && starshipList.length > 0">

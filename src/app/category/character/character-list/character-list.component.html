@@ -1,7 +1,4 @@
-<h3 *ngIf="title" class="title pl-3 pb-2 mb-0" data-test-key="character-title">
-	<i class="fas fa-user-secret"></i>
-	{{ title }}
-</h3>
+<sw-page-title [title]="title" [iconClass]="'fa-user-secret'"></sw-page-title>
 
 <div class="jumbotron jumbotron-fluid">
 	<div class="container" *ngIf="!loading && characterList && characterList.length > 0">

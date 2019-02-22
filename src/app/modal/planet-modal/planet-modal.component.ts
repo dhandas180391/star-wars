@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { Planet } from '../../category/planet/planet.interface';
@@ -7,8 +7,14 @@ import { Planet } from '../../category/planet/planet.interface';
 	selector: 'sw-planet-modal',
 	templateUrl: './planet-modal.component.html'
 })
-export class PlanetModalComponent {
+export class PlanetModalComponent implements OnInit {
 	@Input() data: Planet;
 
+	public loading = true;
+
 	constructor(public activeModal: NgbActiveModal) { }
+
+	ngOnInit() {
+		this.loading = false;
+	}
 }

@@ -15,7 +15,7 @@ import { Character } from '../character/character.interface';
 	templateUrl: './film.component.html'
 })
 export class FilmComponent implements OnInit, OnDestroy {
-	public title: string = '';
+	public title = '';
 	public films: Film[] = [];
 	private routeDataSubscription: Subscription;
 	private characters: Character[] = [];
@@ -54,8 +54,9 @@ export class FilmComponent implements OnInit, OnDestroy {
 
 	public getCharacterName(url: string): string | undefined {
 		const character = filter(this.characters, (c) => c.url === url);
-		if (!isEmpty(character))
+		if (!isEmpty(character)) {
 			return character[0].name;
+		}
 		return undefined;
 	}
 
@@ -66,8 +67,9 @@ export class FilmComponent implements OnInit, OnDestroy {
 
 	public getSpecieName(url: string): string | undefined {
 		const specie = filter(this.species, (s) => s.url === url);
-		if (!isEmpty(specie))
+		if (!isEmpty(specie)) {
 			return specie[0].name;
+		}
 		return undefined;
 	}
 }

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { PageTitleModule } from '../../shared/page-title/page-title.module';
+
 import { PlanetService } from './planet.service';
 import { PlanetListComponent } from './planet-list/planet-list.component';
 
@@ -14,7 +16,8 @@ import { PlanetListComponent } from './planet-list/planet-list.component';
 	],
 	imports: [
 		CommonModule,
-		RouterModule
+		RouterModule,
+		PageTitleModule
 	],
 	providers: [
 		PlanetService

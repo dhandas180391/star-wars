@@ -1,8 +1,5 @@
 sw-character-modal {
-    .modal-header {
-        border-bottom: none;
-        padding: 1rem 1.7rem 0;
-    }
+    @include secondary-modal;
 
     th {
         width: 50%;

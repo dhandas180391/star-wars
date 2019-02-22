@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
+import { PageTitleModule } from '../../shared/page-title/page-title.module';
+
 import { CharacterService } from './character.service';
 import { CharacterListComponent } from './character-list/character-list.component';
 
@@ -16,7 +18,8 @@ import { CharacterListComponent } from './character-list/character-list.componen
 	imports: [
 		CommonModule,
 		RouterModule,
-		HttpClientModule
+		HttpClientModule,
+		PageTitleModule
 	],
 	providers: [
 		CharacterService

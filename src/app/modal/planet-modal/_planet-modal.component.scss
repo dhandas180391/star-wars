@@ -1,4 +1,6 @@
 sw-planet-modal {
+    @include secondary-modal;
+    
     th {
         width: 50%;
     }
