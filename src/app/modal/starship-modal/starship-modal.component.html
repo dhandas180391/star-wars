@@ -5,52 +5,58 @@
 	</button>
 </div>
 <div class="modal-body">
-	<div class="text-center mb-5">
-		<img src="assets/star-wars-ship-icon.png">
-	</div>
+	<h1 class="text-center" *ngIf="loading" data-test-key="starship-modal-spinner">
+		<i class="fas fa-spinner fa-spin"></i>
+	</h1>
 
-	<table class="table">
-		<tbody>
-			<tr>
-				<th scope="row" class="text-right">Model</th>
-				<td class="text-left">{{ data.model }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Manufacturer</th>
-				<td class="text-left">{{ data.manufacturer }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Cost in Credits</th>
-				<td class="text-left">{{ data.cost_in_credits }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Length</th>
-				<td class="text-left">{{ data.length }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Max Atmosphering Speed</th>
-				<td class="text-left">{{ data.max_atmosphering_speed }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Crew</th>
-				<td class="text-left">{{ data.crew }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Passengers</th>
-				<td class="text-left">{{ data.passengers }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Cargo Capacity</th>
-				<td class="text-left">{{ data.cargo_capacity }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Consumables</th>
-				<td class="text-left">{{ data.consumables }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Hyperdrive Rating</th>
-				<td class="text-left">{{ data.hyperdrive_rating }}</td>
-			</tr>
-		</tbody>
-	</table>
+	<ng-container *ngIf="!loading">
+		<div class="text-center mb-5">
+			<img src="assets/star-wars-ship-icon.png">
+		</div>
+
+		<table class="table">
+			<tbody>
+				<tr>
+					<th scope="row" class="text-right">Model</th>
+					<td class="text-left">{{ data.model }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Manufacturer</th>
+					<td class="text-left">{{ data.manufacturer }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Cost in Credits</th>
+					<td class="text-left">{{ data.cost_in_credits }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Length</th>
+					<td class="text-left">{{ data.length }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Max Atmosphering Speed</th>
+					<td class="text-left">{{ data.max_atmosphering_speed }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Crew</th>
+					<td class="text-left">{{ data.crew }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Passengers</th>
+					<td class="text-left">{{ data.passengers }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Cargo Capacity</th>
+					<td class="text-left">{{ data.cargo_capacity }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Consumables</th>
+					<td class="text-left">{{ data.consumables }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Hyperdrive Rating</th>
+					<td class="text-left">{{ data.hyperdrive_rating }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</ng-container>
 </div>

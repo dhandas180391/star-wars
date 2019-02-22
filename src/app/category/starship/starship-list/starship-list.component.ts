@@ -12,9 +12,9 @@ import { Starship } from '../starship.interface';
 	templateUrl: './starship-list.component.html'
 })
 export class StarshipListComponent implements OnInit, OnDestroy {
-	public loading: boolean = true;
+	public loading = true;
 	public starshipList: Starship[] = [];
-	public title: string = '';
+	public title = '';
 	private routeDataSubscription: Subscription;
 
 	constructor(
@@ -34,8 +34,9 @@ export class StarshipListComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		if (this.routeDataSubscription)
+		if (this.routeDataSubscription) {
 			this.routeDataSubscription.unsubscribe();
+		}
 	}
 
 	public viewDetails(data: Starship) {

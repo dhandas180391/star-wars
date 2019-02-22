@@ -12,9 +12,9 @@ import { Planet } from '../planet.interface';
 	templateUrl: './planet-list.component.html'
 })
 export class PlanetListComponent implements OnInit, OnDestroy {
-	public loading: boolean = true;
+	public loading = true;
 	public planetList: Planet[] = [];
-	public title: string = '';
+	public title = '';
 	private routeDataSubscription: Subscription;
 
 	constructor(
@@ -34,8 +34,9 @@ export class PlanetListComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		if (this.routeDataSubscription)
+		if (this.routeDataSubscription) {
 			this.routeDataSubscription.unsubscribe();
+		}
 	}
 
 	public viewDetails(data: Planet) {

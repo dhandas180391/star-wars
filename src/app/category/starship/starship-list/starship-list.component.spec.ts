@@ -4,6 +4,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { By } from '@angular/platform-browser';
 import { ActivatedRoute, Data } from '@angular/router';
 
+import { PageTitleModule } from '../../../shared/page-title/page-title.module';
+
 import { ModalService } from '../../../modal/modal.service';
 
 import { StarshipListComponent } from './starship-list.component';
@@ -26,7 +28,8 @@ describe('Component: StarshipListComponent', () => {
 		TestBed.configureTestingModule({
 			imports: [
 				RouterTestingModule,
-				HttpClientTestingModule
+				HttpClientTestingModule,
+				PageTitleModule
 			],
 			declarations: [
 				StarshipListComponent
@@ -61,7 +64,7 @@ describe('Component: StarshipListComponent', () => {
 		tick();
 		fixture.detectChanges();
 
-		const title = fixture.debugElement.nativeElement.querySelector('[data-test-key="starship-title"]');
+		const title = fixture.debugElement.nativeElement.querySelector('[data-test-key="starships-title"]');
 
 		expect(component.title).toEqual('Starships');
 		expect(title.textContent).toContain('Starships');
