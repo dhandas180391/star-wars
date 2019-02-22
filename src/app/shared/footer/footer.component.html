@@ -1,8 +1,15 @@
 <footer class="footer">
-    <div class="text-center">
-        <small>© Copyright {{ year | date: 'yyyy' }}</small>
+    <div class="footer-text text-center">
+        <small>
+            <a [routerLink]="['/home']" class="footer-link" data-test-key="footer-link-home" title="Home">home</a> |
+            <a [routerLink]="['/characters']" class="footer-link" data-test-key="footer-link-characters" title="Characters">characters</a> |
+            <a [routerLink]="['/planets']" class="footer-link" data-test-key="footer-link-planets" title="Planets">planets</a> |
+            <a [routerLink]="['/starships']" class="footer-link" data-test-key="footer-link-starships" title="Starships">starships</a> |
+            <a [routerLink]="['/films']" class="footer-link" data-test-key="footer-link-films" title="Films">films</a> |
+            <a [routerLink]="" (click)="viewCredits()" class="footer-link" data-test-key="footer-link-credits" title="Credits">credits</a>
+        </small>
     </div>
-    <div class="text-center">
-        <small>PM Connect <span class="dot">.</span> Star Wars <span class="dot">.</span> Simmy Dhanda</small>
+    <div class="footer-text text-center">
+        <small>Star Wars © Copyright {{ year | date: 'yyyy' }} by Simmy Dhanda</small>
     </div>
 </footer>

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostBinding } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter, isEmpty } from 'lodash';
@@ -15,6 +15,8 @@ import { Character } from '../character/character.interface';
 	templateUrl: './film.component.html'
 })
 export class FilmComponent implements OnInit, OnDestroy {
+	@HostBinding('class.page-container') isPage = true;
+
 	public title = '';
 	public films: Film[] = [];
 	private routeDataSubscription: Subscription;
