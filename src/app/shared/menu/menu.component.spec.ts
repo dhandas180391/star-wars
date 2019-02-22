@@ -58,7 +58,7 @@ describe('Component: MenuComponent', () => {
 		});
 	}));
 
-	it('should create the app', () => {
+	it('should create component', () => {
 		expect(component).toBeTruthy();
 	});
 

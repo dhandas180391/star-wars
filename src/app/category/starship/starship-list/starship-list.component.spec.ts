@@ -55,7 +55,7 @@ describe('Component: StarshipListComponent', () => {
 		});
 	}));
 
-	it('should create the component', () => {
+	it('should create component', () => {
 		expect(component).toBeTruthy();
 	});
 

@@ -51,7 +51,7 @@ describe('Component: HomeComponent', () => {
 		});
 	}));
 
-	it('should create the component', () => {
+	it('should create component', () => {
 		expect(component).toBeTruthy();
 	});
 
