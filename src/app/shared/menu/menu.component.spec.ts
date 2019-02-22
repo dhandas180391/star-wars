@@ -3,10 +3,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { By } from '@angular/platform-browser';
-import { NgbModal, NgbModalRef } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+
+import { routes } from '../../app-routing.module';
+import { PageTitleModule } from '../page-title/page-title.module';
 
 import { ModalService } from '../../modal/modal.service';
-import { routes } from '../../app-routing.module';
 
 import { MenuComponent } from './menu.component';
 import { HomeComponent } from '../../home/home.component';
@@ -29,6 +31,7 @@ describe('Component: MenuComponent', () => {
 		TestBed.configureTestingModule({
 			imports: [
 				RouterTestingModule.withRoutes(routes),
+				PageTitleModule
 			],
 			declarations: [
 				MenuComponent,

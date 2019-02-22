@@ -5,40 +5,46 @@
 	</button>
 </div>
 <div class="modal-body">
-	<div class="text-center mb-5">
-		<img src="assets/star-wars-sword-icon.png">
-	</div>
+	<h1 class="text-center" *ngIf="loading" data-test-key="planet-modal-spinner">
+		<i class="fas fa-spinner fa-spin"></i>
+	</h1>
 
-	<table class="table">
-		<tbody>
-			<tr>
-				<th scope="row" class="text-right">Surface Water</th>
-				<td class="text-left">{{ data.surface_water }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Gravity</th>
-				<td class="text-left">{{ data.gravity }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Terrain</th>
-				<td class="text-left">{{ data.terrain }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Climate</th>
-				<td class="text-left">{{ data.climate }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Diameter</th>
-				<td class="text-left">{{ data.diameter }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Orbital Period</th>
-				<td class="text-left">{{ data.orbital_period }}</td>
-			</tr>
-			<tr>
-				<th scope="row" class="text-right">Rotation Period</th>
-				<td class="text-left">{{ data.rotation_period }}</td>
-			</tr>
-		</tbody>
-	</table>
+	<ng-container *ngIf="!loading">
+		<div class="text-center mb-5">
+			<img src="assets/star-wars-sword-icon.png">
+		</div>
+
+		<table class="table">
+			<tbody>
+				<tr>
+					<th scope="row" class="text-right">Surface Water</th>
+					<td class="text-left">{{ data.surface_water }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Gravity</th>
+					<td class="text-left">{{ data.gravity }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Terrain</th>
+					<td class="text-left">{{ data.terrain }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Climate</th>
+					<td class="text-left">{{ data.climate }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Diameter</th>
+					<td class="text-left">{{ data.diameter }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Orbital Period</th>
+					<td class="text-left">{{ data.orbital_period }}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="text-right">Rotation Period</th>
+					<td class="text-left">{{ data.rotation_period }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</ng-container>
 </div>

@@ -1,4 +1,6 @@
 sw-starship-modal {
+    @include secondary-modal;
+    
     th {
         width: 50%;
     }

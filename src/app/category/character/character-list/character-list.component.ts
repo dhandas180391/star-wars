@@ -12,9 +12,9 @@ import { Character } from '../character.interface';
 	templateUrl: './character-list.component.html'
 })
 export class CharacterListComponent implements OnInit, OnDestroy {
-	public loading: boolean = true;
+	public loading = true;
 	public characterList: Character[] = [];
-	public title: string = '';
+	public title = '';
 	private routeDataSubscription: Subscription;
 
 	constructor(
@@ -34,8 +34,9 @@ export class CharacterListComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		if (this.routeDataSubscription)
+		if (this.routeDataSubscription) {
 			this.routeDataSubscription.unsubscribe();
+		}
 	}
 
 	public viewDetails(data: Character) {

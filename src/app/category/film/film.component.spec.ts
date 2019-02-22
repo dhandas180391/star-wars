@@ -3,6 +3,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, Data } from '@angular/router';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
+import { PageTitleModule } from '../../shared/page-title/page-title.module';
+
 import { ModalService } from '../../modal/modal.service';
 import { CharacterService } from '../character/character.service';
 import { SpecieService } from '../specie/specie.service';
@@ -20,7 +22,8 @@ describe('Component: FilmComponent', () => {
 			],
 			imports: [
 				RouterTestingModule,
-				HttpClientTestingModule
+				HttpClientTestingModule,
+				PageTitleModule
 			],
 			providers: [
 				{
@@ -52,7 +55,7 @@ describe('Component: FilmComponent', () => {
 		tick();
 		fixture.detectChanges();
 
-		const title = fixture.debugElement.nativeElement.querySelector('[data-test-key="film-title"]');
+		const title = fixture.debugElement.nativeElement.querySelector('[data-test-key="films-title"]');
 
 		expect(component.title).toEqual('Films');
 		expect(title.textContent).toContain('Films');
