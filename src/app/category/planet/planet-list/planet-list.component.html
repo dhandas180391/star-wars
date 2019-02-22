@@ -1,6 +1,6 @@
 <sw-page-title [title]="title" [iconClass]="'fa-globe-europe'"></sw-page-title>
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid mb-0">
 	<div class="container" *ngIf="!loading && planetList && planetList.length > 0">
 		<ul class="list-group" data-test-key="planet-list">
 			<li class="list-group-item" *ngFor="let p of planetList | slice:0:6;" [title]="p.name"
@@ -14,5 +14,6 @@
 
 	<h1 class="text-center" *ngIf="loading" data-test-key="planet-list-spinner">
 		<i class="fas fa-spinner fa-spin"></i>
+		<div class="mt-3 mb-3 lead">loading<span *ngIf="title"> {{ title | lowercase }}</span>...</div>
 	</h1>
 </div>

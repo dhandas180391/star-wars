@@ -1,12 +1,28 @@
 sw-home {
-    .category:hover {
-        background-color: $pink;
-        color: $white;
-        cursor: pointer;
-        transition: 1s;
+    padding: 50% 0 0 0;
+    background-position: top;
+    background-image: url('assets/star-wars-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include media-breakpoint-up(sm) { 
+        padding: 0 0 0 40%;
+        background-position: right;
+        background-size: cover;
     }
 
-    .disabled-category {
-        color: $gray-500;
+    .container {
+        background-color: $gray-200;
+
+        .category:hover {
+            background-color: $pink;
+            color: $white;
+            cursor: pointer;
+            transition: 1s;
+        }
+    
+        .disabled-category {
+            color: $gray-500;
+        }
     }
 }
