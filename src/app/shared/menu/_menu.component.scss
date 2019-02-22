@@ -5,13 +5,13 @@ sw-menu {
         padding: .4rem 0;
         border-bottom: 1px solid $white;
 
-        a {
+        .menu-item {
             padding: .5rem 1rem;
             text-transform: lowercase;
             color: $gray-900;
-            cursor: pointer;
 
             &:hover {
+                cursor: pointer;
                 text-decoration: none;
                 color: $white;
                 background-color: $pink;
@@ -19,7 +19,7 @@ sw-menu {
             }
         }
 
-        .currently-selected {
+        .menu-item-selected {
             background-color: $pink;
             color: $white;
         }

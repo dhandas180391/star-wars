@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostBinding } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -12,6 +12,8 @@ import { Character } from '../character.interface';
 	templateUrl: './character-list.component.html'
 })
 export class CharacterListComponent implements OnInit, OnDestroy {
+	@HostBinding('class.page-container') isPage = true;
+
 	public loading = true;
 	public characterList: Character[] = [];
 	public title = '';

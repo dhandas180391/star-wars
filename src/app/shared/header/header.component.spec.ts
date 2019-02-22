@@ -30,7 +30,7 @@ describe('Component: HeaderComponent', () => {
 		});
 	}));
 
-	it('should create the app', () => {
+	it('should create component', () => {
 		expect(component).toBeTruthy();
 	});
 

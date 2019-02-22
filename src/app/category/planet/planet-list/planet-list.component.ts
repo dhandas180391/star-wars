@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostBinding } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -12,6 +12,8 @@ import { Planet } from '../planet.interface';
 	templateUrl: './planet-list.component.html'
 })
 export class PlanetListComponent implements OnInit, OnDestroy {
+	@HostBinding('class.page-container') isPage = true;
+
 	public loading = true;
 	public planetList: Planet[] = [];
 	public title = '';
