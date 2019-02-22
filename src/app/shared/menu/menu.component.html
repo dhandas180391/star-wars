@@ -1,7 +1,8 @@
 <div class="menu text-center">
     <a
-        [routerLink]="['./home']"
-        [routerLinkActive]="['currently-selected']"
+        [routerLink]="['/home']"
+        [routerLinkActive]="['menu-item-selected']"
+        class="menu-item"
         title="Home"
         data-test-key="menu-item-home"
     >
@@ -10,8 +11,9 @@
     </a>
 
     <a
-        [routerLink]="['./characters']"
-        [routerLinkActive]="['currently-selected']"
+        [routerLink]="['/characters']"
+        [routerLinkActive]="['menu-item-selected']"
+        class="menu-item"
         title="Characters"
         data-test-key="menu-item-characters"
     >
@@ -20,8 +22,9 @@
     </a>
 
     <a
-        [routerLink]="['./planets']"
-        [routerLinkActive]="['currently-selected']"
+        [routerLink]="['/planets']"
+        [routerLinkActive]="['menu-item-selected']"
+        class="menu-item"
         title="Planets"
         data-test-key="menu-item-planets"
     >
@@ -30,8 +33,9 @@
     </a>
 
     <a
-        [routerLink]="['./starships']"
-        [routerLinkActive]="['currently-selected']"
+        [routerLink]="['/starships']"
+        [routerLinkActive]="['menu-item-selected']"
+        class="menu-item"
         title="Starships"
         data-test-key="menu-item-starships"
     >
@@ -40,8 +44,9 @@
     </a>
 
     <a
-        [routerLink]="['./films']"
-        [routerLinkActive]="['currently-selected']"
+        [routerLink]="['/films']"
+        [routerLinkActive]="['menu-item-selected']"
+        class="menu-item"
         title="Films"
         data-test-key="menu-item-films"
     >
@@ -52,6 +57,7 @@
     <a
         [routerLink]=""
         (click)="viewCredits()"
+        class="menu-item"
         title="Credits"
         data-test-key="menu-item-credits"
     >

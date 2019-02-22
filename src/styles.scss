@@ -6,6 +6,7 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
+@import './app/shared/scss/variables';
 @import './app/shared/scss/mixins';
 
 @import './app/app.component';
@@ -15,7 +16,6 @@ html {
     min-height: 100%;
 
     body {
-        background-color: $gray-200;
-        margin-bottom: 60px; /* same as footer height */
+        margin-bottom: $page-footer-height; // needed for sticky footer
     }
 }
