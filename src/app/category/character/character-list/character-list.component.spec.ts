@@ -4,6 +4,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { By } from '@angular/platform-browser';
 import { ActivatedRoute, Data } from '@angular/router';
 
+import { PageTitleModule } from '../../../shared/page-title/page-title.module';
+
 import { ModalService } from '../../../modal/modal.service';
 
 import { CharacterListComponent } from './character-list.component';
@@ -26,7 +28,8 @@ describe('Component: CharacterListComponent', () => {
 		TestBed.configureTestingModule({
 			imports: [
 				RouterTestingModule,
-				HttpClientTestingModule
+				HttpClientTestingModule,
+				PageTitleModule
 			],
 			declarations: [
 				CharacterListComponent
@@ -61,7 +64,7 @@ describe('Component: CharacterListComponent', () => {
 		tick();
 		fixture.detectChanges();
 
-		const title = fixture.debugElement.nativeElement.querySelector('[data-test-key="character-title"]');
+		const title = fixture.debugElement.nativeElement.querySelector('[data-test-key="characters-title"]');
 
 		expect(component.title).toEqual('Characters');
 		expect(title.textContent).toContain('Characters');

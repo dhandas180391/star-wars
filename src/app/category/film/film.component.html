@@ -1,7 +1,4 @@
-<h3 *ngIf="title" class="title pl-3 pb-2 mb-0" data-test-key="film-title">
-	<i class="fas fa-film"></i>
-	{{ title }}
-</h3>
+<sw-page-title [title]="title" [iconClass]="'fa-film'"></sw-page-title>
 
 <div class="container" *ngIf="films && films.length > 0">
 	<div *ngFor="let f of films" class="film" [attr.data-test-key]="'film-' + f.title" [title]="f.title">

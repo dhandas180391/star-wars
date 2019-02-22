@@ -6,6 +6,7 @@ import { Location } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { routes } from '../app-routing.module';
+import { PageTitleModule } from '../shared/page-title/page-title.module';
 
 import { HomeComponent } from './home.component';
 import { CharacterListComponent } from '../category/character/character-list/character-list.component';
@@ -32,7 +33,8 @@ describe('Component: HomeComponent', () => {
 			],
 			imports: [
 				RouterTestingModule.withRoutes(routes),
-				HttpClientTestingModule
+				HttpClientTestingModule,
+				PageTitleModule
 			],
 			providers: [
 				FilmResolver

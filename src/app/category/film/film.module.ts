@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { PageTitleModule } from '../../shared/page-title/page-title.module';
+
 import { CharacterService } from '../character/character.service';
 import { SpecieService } from '../specie/specie.service';
 
@@ -15,7 +17,8 @@ import { FilmResolver } from './film-resolver.service';
 		FilmComponent
 	],
 	imports: [
-		CommonModule
+		CommonModule,
+		PageTitleModule
 	],
 	providers: [
 		FilmResolver,
