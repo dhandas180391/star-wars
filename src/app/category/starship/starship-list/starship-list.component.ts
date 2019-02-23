@@ -41,7 +41,7 @@ export class StarshipListComponent implements OnInit, OnDestroy {
 		}
 	}
 
-	public viewDetails(data: Starship) {
+	public viewDetails(data: Starship): Promise<any> {
 		return this.modalService.starshipDetails(data);
 	}
 }

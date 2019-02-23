@@ -1,0 +1,7 @@
+sw-specie-list {
+    @include lists;
+    
+    .list-group-item {
+        cursor: pointer;
+    }
+}

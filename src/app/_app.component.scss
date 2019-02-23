@@ -1,13 +1,7 @@
-@import './modal/modal.component';
 @import './home/home.component';
-@import './shared/header/header.component';
-@import './shared//footer/footer.component';
-@import './shared/page-title/page-title.component';
-@import './shared/menu/menu.component';
-@import './category/character/character-list/character-list.component';
-@import './category/planet/planet-list/planet-list.component';
-@import './category/starship/starship-list/starship-list.component';
-@import './category/film/film.component';
+@import './category/category';
+@import './modal/modal';
+@import './shared/shared';
 
 sw-root {
     main {

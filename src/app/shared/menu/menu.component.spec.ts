@@ -16,6 +16,7 @@ import { CharacterListComponent } from '../../category/character/character-list/
 import { PlanetListComponent } from '../../category/planet/planet-list/planet-list.component';
 import { StarshipListComponent } from '../../category/starship/starship-list/starship-list.component';
 import { FilmComponent } from '../../category/film/film.component';
+import { SpecieListComponent } from '../../category/specie/specie-list/specie-list.component';
 import { CreditsModalComponent } from '../../modal/credits-modal/credits-modal.component';
 
 describe('Component: MenuComponent', () => {
@@ -39,7 +40,8 @@ describe('Component: MenuComponent', () => {
 				CharacterListComponent,
 				PlanetListComponent,
 				StarshipListComponent,
-				FilmComponent
+				FilmComponent,
+				SpecieListComponent
 			],
 			providers: [
 				ModalService

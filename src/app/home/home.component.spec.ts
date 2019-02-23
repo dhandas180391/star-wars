@@ -13,6 +13,8 @@ import { CharacterListComponent } from '../category/character/character-list/cha
 import { PlanetListComponent } from '../category/planet/planet-list/planet-list.component';
 import { StarshipListComponent } from '../category/starship/starship-list/starship-list.component';
 import { FilmComponent } from '../category/film/film.component';
+import { SpecieListComponent } from '../category/specie/specie-list/specie-list.component';
+
 import { FilmResolver } from '../category/film/film-resolver.service';
 
 describe('Component: HomeComponent', () => {
@@ -29,7 +31,8 @@ describe('Component: HomeComponent', () => {
 				CharacterListComponent,
 				PlanetListComponent,
 				StarshipListComponent,
-				FilmComponent
+				FilmComponent,
+				SpecieListComponent
 			],
 			imports: [
 				RouterTestingModule.withRoutes(routes),
@@ -75,12 +78,11 @@ describe('Component: HomeComponent', () => {
 		});
 
 		it(`categories 'Vehicles', 'Species', 'Pilots' should be disabled`, () => {
-			const disabledCategories = fixture.debugElement.queryAll(By.css('.disabled-category'));
+			const disabledCategories = fixture.debugElement.queryAll(By.css('.disabled'));
 
-			expect(disabledCategories.length).toEqual(3);
+			expect(disabledCategories.length).toEqual(2);
 			expect(disabledCategories[0].nativeElement.textContent).toContain('Vehicles');
 			expect(disabledCategories[1].nativeElement.textContent).toContain('Pilots');
-			expect(disabledCategories[2].nativeElement.textContent).toContain('Species');
 		});
 	});
 

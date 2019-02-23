@@ -7,11 +7,11 @@ import { ModalService } from '../../modal/modal.service';
 	templateUrl: './footer.component.html'
 })
 export class FooterComponent {
-	public year = new Date();
+	public year: Date = new Date();
 
 	constructor(private modalService: ModalService) { }
 
-	public viewCredits() {
+	public viewCredits(): Promise<any> {
 		return this.modalService.credits();
 	}
 }

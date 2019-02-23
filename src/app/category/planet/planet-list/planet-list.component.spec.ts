@@ -73,7 +73,7 @@ describe('Component: PlanetListComponent', () => {
 	it('should show loading spinner', () => {
 		fixture.detectChanges();
 
-		const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="planet-list-spinner"]');
+		const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="planets-spinner"]');
 
 		expect(component.loading).toBe(true);
 		expect(spinner).not.toBeNull();
@@ -103,7 +103,7 @@ describe('Component: PlanetListComponent', () => {
 			tick();
 			fixture.detectChanges();
 
-			const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="planet-list-spinner"]');
+			const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="planets-spinner"]');
 
 			expect(component.loading).toBe(false);
 			expect(spinner).toBeNull();
@@ -114,7 +114,7 @@ describe('Component: PlanetListComponent', () => {
 			tick();
 			fixture.detectChanges();
 
-			const planets = fixture.debugElement.queryAll(By.css('[data-test-key="planet-list"] li'));
+			const planets = fixture.debugElement.queryAll(By.css('[data-test-key="planets-list"] li'));
 
 			expect(component.planetList.length).toEqual(1);
 			expect(planets.length).toEqual(1);

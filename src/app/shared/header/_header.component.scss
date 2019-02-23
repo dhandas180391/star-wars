@@ -3,6 +3,17 @@ sw-header {
     width: 100%;
     z-index: 1000;
 
+    .home-icon {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        color: $gray-500;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
     .heading {
         background-color: $gray-900;
         margin: 0;

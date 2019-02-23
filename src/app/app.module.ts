@@ -11,6 +11,7 @@ import { PlanetModule } from './category/planet/planet.module';
 import { StarshipModule } from './category/starship/starship.module';
 import { ModalModule } from './modal/modal.module';
 import { FilmModule } from './category/film/film.module';
+import { SpecieModule } from './category/specie/specie.module';
 
 import { AppComponent } from './app.component';
 
@@ -29,7 +30,8 @@ import { AppComponent } from './app.component';
 		PlanetModule,
 		StarshipModule,
 		ModalModule,
-		FilmModule
+		FilmModule,
+		SpecieModule
 	],
 	bootstrap: [
 		AppComponent

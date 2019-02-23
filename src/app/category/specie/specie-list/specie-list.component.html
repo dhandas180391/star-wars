@@ -1,16 +1,16 @@
-<sw-page-title [title]="title" [iconClass]="'fa-user-secret'"></sw-page-title>
+<sw-page-title [title]="title" [iconClass]="'fa-atom'"></sw-page-title>
 
 <div class="jumbotron jumbotron-fluid mb-0">
-	<div class="container" *ngIf="!loading && characterList && characterList.length > 0">
+	<div class="container" *ngIf="!loading && specieList && specieList.length > 0">
 		<ul class="list-group" attr.data-test-key="{{ title | lowercase }}-list">
-			<li class="list-group-item" *ngFor="let c of characterList" [title]="c.name"
+			<li class="list-group-item" *ngFor="let c of specieList | slice:0:4;" [title]="c.name"
 				(click)="viewDetails(c)">
 				{{ c.name }}
 			</li>
 		</ul>
 	</div>
 
-	<div *ngIf="!loading && characterList.length === 0" class="text-center lead" attr.data-test-key="no-{{ title | lowercase }}-msg">No characters were found</div>
+	<div *ngIf="!loading && specieList.length === 0" class="text-center lead" attr.data-test-key="no-{{ title | lowercase }}-msg">No species were found</div>
 
 	<h1 class="text-center" *ngIf="loading" attr.data-test-key="{{ title | lowercase }}-spinner">
 		<i class="fas fa-spinner fa-spin"></i>

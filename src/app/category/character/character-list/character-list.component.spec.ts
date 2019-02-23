@@ -73,7 +73,7 @@ describe('Component: CharacterListComponent', () => {
 	it('should show loading spinner', () => {
 		fixture.detectChanges();
 
-		const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="character-list-spinner"]');
+		const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="characters-spinner"]');
 
 		expect(component.loading).toBe(true);
 		expect(spinner).not.toBeNull();
@@ -103,7 +103,7 @@ describe('Component: CharacterListComponent', () => {
 			tick();
 			fixture.detectChanges();
 
-			const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="character-list-spinner"]');
+			const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="characters-spinner"]');
 
 			expect(component.loading).toBe(false);
 			expect(spinner).toBeNull();
@@ -114,7 +114,7 @@ describe('Component: CharacterListComponent', () => {
 			tick();
 			fixture.detectChanges();
 
-			const characters = fixture.debugElement.queryAll(By.css('[data-test-key="character-list"] li'));
+			const characters = fixture.debugElement.queryAll(By.css('[data-test-key="characters-list"] li'));
 
 			expect(component.characterList.length).toEqual(1);
 			expect(characters.length).toEqual(1);

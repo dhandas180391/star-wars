@@ -73,7 +73,7 @@ describe('Component: StarshipListComponent', () => {
 	it('should show loading spinner', () => {
 		fixture.detectChanges();
 
-		const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="starship-list-spinner"]');
+		const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="starships-spinner"]');
 
 		expect(component.loading).toBe(true);
 		expect(spinner).not.toBeNull();
@@ -103,7 +103,7 @@ describe('Component: StarshipListComponent', () => {
 			tick();
 			fixture.detectChanges();
 
-			const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="starship-list-spinner"]');
+			const spinner = fixture.debugElement.nativeElement.querySelector('[data-test-key="starships-spinner"]');
 
 			expect(component.loading).toBe(false);
 			expect(spinner).toBeNull();
@@ -114,7 +114,7 @@ describe('Component: StarshipListComponent', () => {
 			tick();
 			fixture.detectChanges();
 
-			const starships = fixture.debugElement.queryAll(By.css('[data-test-key="starship-list"] li'));
+			const starships = fixture.debugElement.queryAll(By.css('[data-test-key="starships-list"] li'));
 
 			expect(component.starshipList.length).toEqual(1);
 			expect(starships.length).toEqual(1);

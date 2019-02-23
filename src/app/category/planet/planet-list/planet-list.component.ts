@@ -41,7 +41,7 @@ export class PlanetListComponent implements OnInit, OnDestroy {
 		}
 	}
 
-	public viewDetails(data: Planet) {
+	public viewDetails(data: Planet): Promise<any> {
 		return this.modalService.planetDetails(data);
 	}
 }

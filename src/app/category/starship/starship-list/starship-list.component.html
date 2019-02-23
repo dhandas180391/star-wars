@@ -2,7 +2,7 @@
 
 <div class="jumbotron jumbotron-fluid mb-0">
 	<div class="container" *ngIf="!loading && starshipList && starshipList.length > 0">
-		<ul class="list-group" data-test-key="starship-list">
+		<ul class="list-group" attr.data-test-key="{{ title | lowercase }}-list">
 			<li class="list-group-item" *ngFor="let s of starshipList | slice:0:5;" [title]="s.name"
 				(click)="viewDetails(s)">
 				{{ s.name }}
@@ -10,9 +10,9 @@
 		</ul>
 	</div>
 
-	<div *ngIf="!loading && starshipList.length === 0" class="text-center lead" data-test-key="no-starships-msg">No starships were found</div>
+	<div *ngIf="!loading && starshipList.length === 0" class="text-center lead" attr.data-test-key="no-{{ title | lowercase }}-msg">No starships were found</div>
 
-	<h1 class="text-center" *ngIf="loading" data-test-key="starship-list-spinner">
+	<h1 class="text-center" *ngIf="loading" attr.data-test-key="{{ title | lowercase }}-spinner">
 		<i class="fas fa-spinner fa-spin"></i>
 		<div class="mt-3 mb-3 lead">loading<span *ngIf="title"> {{ title | lowercase }}</span>...</div>
 	</h1>

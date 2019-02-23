@@ -5,10 +5,11 @@ import { filter, isEmpty } from 'lodash';
 
 import { ModalService } from '../../modal/modal.service';
 import { SpecieService } from '../specie/specie.service';
+import { CharacterService } from '../character/character.service';
+
+import { Character } from '../character/character.interface';
 
 import { Film } from './film.interface';
-import { CharacterService } from '../character/character.service';
-import { Character } from '../character/character.interface';
 
 @Component({
 	selector: 'sw-film',

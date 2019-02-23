@@ -55,6 +55,17 @@
     </a>
 
     <a
+        [routerLink]="['/species']"
+        [routerLinkActive]="['menu-item-selected']"
+        class="menu-item"
+        title="Species"
+        data-test-key="menu-item-species"
+    >
+        <i class="fas fa-atom"></i>
+        <span class="d-none d-sm-none d-md-inline"> Species</span>
+    </a>
+
+    <a
         [routerLink]=""
         (click)="viewCredits()"
         class="menu-item"

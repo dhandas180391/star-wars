@@ -1,6 +1,6 @@
 <sw-page-title [title]="title" [iconClass]="'fa-film'"></sw-page-title>
 
-<div class="container" *ngIf="films && films.length > 0">
+<div class="container" *ngIf="films && films.length > 0" attr.data-test-key="{{ title | lowercase }}-list">
 	<div *ngFor="let f of films" class="film" [attr.data-test-key]="'film-' + f.title" [title]="f.title">
 		<h4>{{ f.title }}</h4>
 

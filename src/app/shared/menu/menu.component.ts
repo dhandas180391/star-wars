@@ -11,7 +11,7 @@ export class MenuComponent {
 		private modalService: ModalService
 	) { }
 
-	public viewCredits() {
+	public viewCredits(): Promise<any> {
 		return this.modalService.credits();
 	}
 }

@@ -41,7 +41,7 @@ export class CharacterListComponent implements OnInit, OnDestroy {
 		}
 	}
 
-	public viewDetails(data: Character) {
+	public viewDetails(data: Character): Promise<any> {
 		return this.modalService.characterDetails(data);
 	}
 }
